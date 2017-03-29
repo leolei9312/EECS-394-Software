@@ -1,1 +1,1 @@
-# EECS-394-Software
+# EECS-394-Software Management
