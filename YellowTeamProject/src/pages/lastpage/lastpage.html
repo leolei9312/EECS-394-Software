@@ -1,9 +1,6 @@
 <ion-header>
   <ion-navbar>
     <ion-row>
-    <button ion-button (click)="Goback()" clear icon-left color="dark">
-      <ion-icon name="ios-arrow-back"></ion-icon>
-    </button>
     <ion-title>SofaSurf</ion-title>
   </ion-row>
   </ion-navbar>
@@ -13,13 +10,13 @@
   <div class="upper">
       <ion-slides pager>
         <ion-slide>
-          <img src='../../assets/img/sofa.JPG'>
+          <img src={{sofa1}}>
         </ion-slide>
         <ion-slide>
-          <img src='../../assets/img/sofa.JPG'>
+          <img src={{sofa2}}>
         </ion-slide>
         <ion-slide>
-          <img src='../../assets/img/sofa.JPG'>
+          <img src={{sofa3}}>
         </ion-slide>
       </ion-slides>
   </div>
@@ -28,13 +25,13 @@
         <ion-row>
           <ion-col text-left>
         <ion-avatar item-left>
-          <img src='../../assets/img/menglei.jpeg'>
+          <img src={{hostimg}}>
         </ion-avatar>
       </ion-col>
       <ion-col text-right>
-        <h1>AAAA BBBB</h1>
-        <h2>Evanston</h2>
-        <p>Connection: Menglei Lei    <span><small>1st Degree</small></span></p>
+        <h1>{{name}}</h1>
+        <h2>{{location}}</h2>
+        <p>Connection: {{connection}}    <span><small>{{degree}}</small></span></p>
         Rating: <ion-icon name="heart"></ion-icon><ion-icon name="heart"></ion-icon><ion-icon name="heart"></ion-icon><ion-icon name="heart" isActive="false"></ion-icon><ion-icon name="heart" isActive="false"></ion-icon>
       </ion-col>
         </ion-row>
@@ -49,11 +46,11 @@
     </ion-item>
     <ion-item>
       <h1>Description:</h1><br>
-      <p>This is my house and you are weilcome to live for free.<br>This is my house and you are weilcome to live for free.<br>This is my house and you are weilcome to live for free.<br>This is my house and you are weilcome to live for free.<br>This is my house and you are weilcome to live for free.<br>This is my house and you are weilcome to live for free.</p>
+      <p>{{intro}}</p>
       <br><br>
       <h1>Contact Info:</h1><br>
-      <h2>Phone:<p>1234567890</p></h2>
-      <h2>Email:<p>123@gmail.com</p></h2>
+      <h2>Phone:<p>{{phone}}</p></h2>
+      <h2>Email:<p>{{email}}</p></h2>
     </ion-item>
     <ion-item>
       <ion-row>

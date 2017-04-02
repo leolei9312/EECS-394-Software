@@ -9,7 +9,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LastPage } from '../pages/lastpage/lastpage';
 
-
 @NgModule({
   declarations: [
     MyApp,
