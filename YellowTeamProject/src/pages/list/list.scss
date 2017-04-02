@@ -1,8 +1,10 @@
 page-list{
-.button{
+ion-content .button{
   background-color: #8DCAFF;
 }
-
+ion-title{
+  text-align: right;
+}
 
 // ion-card:hover ion-item{
 //   background-color: #f7f9fc;

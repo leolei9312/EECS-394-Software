@@ -1,10 +1,11 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+    <ion-row>
+    <button ion-button (click)="Goback()" clear icon-left color="dark">
+      <ion-icon name="ios-arrow-back"></ion-icon>
     </button>
-    <ion-title>SofaSurf List</ion-title>
-    <!-- <img src="../../assets/img/logo.png"> -->
+    <ion-title>SofaSurf</ion-title>
+  </ion-row>
   </ion-navbar>
 </ion-header>
 
@@ -24,7 +25,7 @@
       </ion-col>
     </ion-row>
   </ion-list>
-  <ion-card  *ngFor="let host of hosts">
+  <ion-card *ngFor="let host of hosts" (click)="GoDetail(host)">
 
       <ion-slides pager>
 

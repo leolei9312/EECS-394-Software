@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, Nav } from 'ionic-angular';
 
 import { ItemDetailsPage } from '../item-details/item-details';
-
+import { HelloIonicPage } from '../hello-ionic/hello-ionic';
+import { LastPage } from '../lastpage/lastpage';
 
 @Component({
   selector: 'page-list',
@@ -11,11 +12,12 @@ import { ItemDetailsPage } from '../item-details/item-details';
 })
 export class ListPage {
 
-  hosts : Array<{name:string, location:string, connection:string, degree:string, intro:string, hostimg:string, sofaimg1:any, sofaimg2:any, sofaimg3:any}>
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  hosts : Array<{component:any, name:string, location:string, connection:string, degree:string, intro:string, hostimg:string, sofaimg1:any, sofaimg2:any, sofaimg3:any}>
+  constructor(public navCtrl: NavController, public navParams: NavParams, public nav: Nav) {
 
     this.hosts=[
       {
+       component:LastPage,
        name:'Marty McFly',
        location:"Evanston",
        connection:'Menglei Lei',
@@ -28,6 +30,7 @@ export class ListPage {
      },
 
       {
+       component:LastPage,
        name:'AAAAA BBBBB',
        location:"Los Angeles",
        connection:'Menglei Lei',
@@ -40,6 +43,7 @@ export class ListPage {
      },
 
       {
+        component:LastPage,
         name:'CCCCC DDDDD',
         location:"San Jose",
         connection:'Menglei Lei',
@@ -52,6 +56,7 @@ export class ListPage {
       },
 
       {
+        component:LastPage,
         name:'EEEEE FFFFFF',
         location:"Chicago",
         connection:'Menglei Lei',
@@ -64,11 +69,12 @@ export class ListPage {
       }
 
     ];
+  }
+  Goback(){
+    this.nav.setRoot(HelloIonicPage);
+  }
+  GoDetail(page:any){
+    this.nav.setRoot(page.component);
+  }
 
-  // itemTapped(event, item) {
-  //   this.navCtrl.push(ItemDetailsPage, {
-  //     item: item
-  //   });
-  // }
-}
 }

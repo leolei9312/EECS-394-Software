@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { ToastController } from 'ionic-angular';
+import { Platform, Nav } from 'ionic-angular';
+import { ListPage } from '../list/list';
+import { HelloIonicPage } from '../hello-ionic/hello-ionic';
 @Component({
   selector:'LastPage',
   templateUrl: 'lastpage.html'
@@ -14,7 +17,10 @@ export class LastPage {
   rate:any;
   warning:string;
 
-  constructor(public toastCtrl: ToastController){
+  constructor(
+    public toastCtrl: ToastController,
+    public nav: Nav
+  ){
     this.Comments=[
       {headimg:"http://www.piz18.com/wp-content/uploads/2015/05/So-beautiful-melancholic-cat-550x371.jpg", name:"Menglei", comment:"This is good!", rate:"Very Good"},
       {headimg:"http://www.piz18.com/wp-content/uploads/2015/05/So-beautiful-melancholic-cat-550x371.jpg", name:"Alex", comment:"This is bad!", rate:"Very Bad"}
@@ -49,4 +55,7 @@ export class LastPage {
     }
   }
 
+  Goback(){
+    this.nav.setRoot(ListPage);
+  }
 }
